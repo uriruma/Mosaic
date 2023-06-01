@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
-footer p {
-  color: rgb(125, 125, 125);
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  /* padding: 10px; */
+  /* border: 1px solid #ccc; */
+  border: none;
+}
+

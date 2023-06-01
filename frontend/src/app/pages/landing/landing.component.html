@@ -3,42 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>Landing Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(rgb(248, 77, 158), rgb(255, 116, 117));
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    .logo {
-      text-align: center;
-    }
-
-    .logo img {
-      width: 200px;
-      height: auto;
-    }
-
-    .tagline {
-      text-align: center;
-      color: #fff;
-      font-size: 24px;
-      margin-top: 20px;
-    }
-  </style>
-
 </head>
 <body>
-  <div class="logo">
-    <img src="../../../assets/img/mosaic-logo.ico" alt="Logo">
+  <div class="container">
+    <div class="column">
+      <div class="logo">
+        <img src="../../../assets/img/mosaic-logo.ico" alt="Logo">
+      </div>
+      <div class="tagline">
+        Welcome to Mosaic!
+      </div>
+      <!-- <i class="bi bi-eye"> aqui</i>
+      <i class="bi bi-balloon-fill"></i> -->
+    </div>
+    <div class="column">
+      <p>hola</p>
+      <app-login></app-login>
+    </div>
   </div>
-  <div class="tagline">
-    Welcome to our landing page!
-  </div>
+
 </body>
 </html>

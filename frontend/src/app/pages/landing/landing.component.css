@@ -1,0 +1,39 @@
+footer p {
+  color: rgb(125, 125, 125);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(rgb(248, 77, 158), rgb(255, 116, 117)); */
+  background-color: rgb(255, 255, 255);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* height: 100vh; */
+  /* font-family: Arial, sans-serif; */
+}
+
+.column {
+  margin-top: 15%;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.tagline {
+  text-align: center;
+  color: #868686;
+  font-size: 30px;
+  /* margin-top: 20px; */
+}
+
+/* .bi-eye{
+  background: red;
+ } */
