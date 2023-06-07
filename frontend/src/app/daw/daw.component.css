@@ -9,6 +9,7 @@
   flex: 1; /* Allow the main section to fill the remaining vertical space */
 }
 
+/******      GENERAL SONG CONTROLS      ******/
 .general-controls {
   background-color: #913232;
   position: sticky;
@@ -24,7 +25,8 @@
   align-items: center; */
 }
 
-/* TRACKS */
+
+/******      TRACKS      *******/
 
 .tracks-container {
   flex: 1;
@@ -48,7 +50,7 @@
   /* Adjust track visualization styles */
 }
 
-/* SONG MARKER */
+/******      SONG MARKER      ******/
 
 .song-marker {
   position: relative;
