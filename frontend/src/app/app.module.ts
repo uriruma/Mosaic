@@ -12,6 +12,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RecoverPasswordComponent } from './pages/recover-password/recover-password.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DawComponent } from './daw/daw.component';
+import { StudioComponent } from './studio/studio.component';
+
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,12 +29,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     AboutComponent,
     LandingComponent,
-    FooterComponent
+    FooterComponent,
+    RecoverPasswordComponent,
+    DawComponent,
+    StudioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    // BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

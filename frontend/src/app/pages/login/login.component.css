@@ -1,5 +1,5 @@
 .login-form {
-  max-width: 235px;
+  width: 420px;
   margin: 0 auto;
   background: linear-gradient(rgb(248, 77, 158), rgb(255, 116, 117));
   padding: 20px;
@@ -11,25 +11,27 @@
 }
 
 .form-group {
+  /* padding-top: 20px; */
   max-width: 100%;
 }
 
+/* .input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+} */
+
 .form-control {
   margin-bottom: 20px;
-  max-width: 100%;
+  width: 350px;
   padding: 10px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255);
+  display: inline-block;
 }
-
-.position-relative .form-control {
-  padding-right: 40px;
-}
-
-
 
 .form-control::placeholder {
   color: rgba(255, 255, 255);
@@ -42,14 +44,39 @@
 
 .form-control:focus {
   outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
 }
+
+.error-message i {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.mail-group .error-message i {
+  position: absolute;
+  top: 24%;
+  /* color: red; */
+  left: 73.2%;
+
+}
+
+.position-relative .error-message i {
+  position: absolute;
+  /* top: 60%; */
+  bottom: -5%;
+  left: 55%;
+}
+
+/* .error-message i {
+  vertical-align: middle;
+} */
 
 .btn {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
-  background: linear-gradient(rgb(248, 77, 158), rgb(255, 116, 117));
+  background: rgba(rgba(42, 42, 139, 0.272));
   color: #fff;
   cursor: pointer;
 }
@@ -60,13 +87,53 @@
 }
 
 .password-toggle {
-  color: rgb(0, 0, 0);
   position: absolute;
+  right: 10px;
   top: 35%;
-  right: -5px;
   transform: translateY(-50%);
+  /* z-index: 0; */
+}
+
+.password-toggle button {
+  color: rgb(0, 0, 0);
   background: none;
   border: none;
   cursor: pointer;
 }
 
+.forgot-password-link {
+  margin: 15px 0px 5px 0px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  color: #ccc;
+}
+
+.login-btn {
+  margin-top: 10px;
+  padding: 10px 80px;
+}
+
+hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ffffff;
+  width: 100%;
+}
+
+.create-account-btn {
+  margin-top: 5px;
+  /* margin-bottom: 20px; */
+  padding: 10px 95px;
+}
+
+/* Media query for screens smaller than 576px */
+@media (max-width: 576px) {
+  .login-form {
+    max-width: 100%;
+    padding: 10px;
+  }
+}

@@ -1,13 +1,47 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
-  <div class="form-group">
-    <input type="text" formControlName="emailOrUsername" placeholder="Email or username" class="form-control">
+  <div class="form-group mail-group">
+    <div class="input-container">
+      <input type="text" formControlName="emailOrUsername" placeholder="Email or username" class="form-control">
+    </div>
+    <div *ngIf="isFormControlInvalid('emailOrUsername')" class="error-message">
+      <i class="bi bi-x-circle-fill"> {{ getErrorMessage('emailOrUsername') }}</i>
+    </div>
   </div>
   <div class="form-group position-relative">
-    <input type="password" formControlName="password" placeholder="Password" class="form-control"
-      [type]="showPassword ? 'text' : 'password'">
-    <button type="button" *ngIf="loginForm.get('password')?.value !== ''" (click)="togglePasswordVisibility()" class="btn btn-link password-toggle">
-      <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash-fill' : 'bi-eye-fill'"></i>
-    </button>
+    <div class="input-container">
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+        class="form-control"
+        [type]="showPassword ? 'text' : 'password'"
+        pattern="^\w{5,}$"
+      />
+      <div class="password-toggle">
+        <button
+          type="button"
+          *ngIf="loginForm.get('password')?.value !== ''"
+          (click)="togglePasswordVisibility()"
+          class="btn btn-link"
+        >
+          <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash-fill' : 'bi-eye-fill'"></i>
+        </button>
+      </div>
+    </div>
+    <div *ngIf="isFormControlInvalid('password')" class="error-message">
+      <i class="bi bi-x-circle-fill"> {{ getErrorMessage('password') }}</i>
+
+    </div>
   </div>
-  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Log In</button>
+
+  <button
+    type="submit"
+    [disabled]="loginForm.invalid"
+    class="btn btn-primary login-btn"
+  >
+    Log In
+  </button>
+  <a routerLink="/recover-password" class="forgot-password-link">Forgot your password?</a>
+  <hr />
+  <button type="button" class="btn btn-secondary create-account-btn">Create new account</button>
 </form>

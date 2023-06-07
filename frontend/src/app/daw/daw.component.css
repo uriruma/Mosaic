@@ -1,0 +1,65 @@
+/* Add the CSS styles here */
+.studio-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Set the height to fill the viewport */
+}
+
+.studio-main {
+  flex: 1; /* Allow the main section to fill the remaining vertical space */
+}
+
+.general-controls {
+  background-color: #913232;
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+/* Adjustments to the existing CSS */ /* MIRAR AIXO PERQ NO ES NECESSARI*/
+.studio-container .tracks-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+/* TRACKS */
+
+.tracks-container {
+  flex: 1;
+  overflow-y: auto;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.tracks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tracks-table th,
+.tracks-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.track-visualization {
+  /* Adjust track visualization styles */
+}
+
+/* SONG MARKER */
+
+.song-marker {
+  position: relative;
+  height: 20px;
+  background-color: #f00;
+}
+
+.song-marker::after {
+  content: "4 beats"; /* Example: Display the number of beats */
+  position: absolute;
+  top: 0;
+  right: -50px;
+  color: #fff;
+}

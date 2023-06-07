@@ -15,7 +15,12 @@ body {
 }
 
 .column {
-  margin-top: 15%;
+  display: flex;
+  flex-direction: column; /* Arrange children elements in a column */
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal alignment */
+  margin-top: 7%;
+  /* border: 1px solid black; */
 }
 
 .logo {
@@ -28,6 +33,7 @@ body {
 }
 
 .tagline {
+
   text-align: center;
   color: #868686;
   font-size: 30px;

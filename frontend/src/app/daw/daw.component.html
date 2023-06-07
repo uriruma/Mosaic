@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio</title>
+  </head>
+  <body>
+    <app-navbar></app-navbar>
+    <div class="studio-container">
+      <main class="studio-main">
+        <header class="general-controls">
+          <!-- Generals controls: play, record, stop, bpm, etc. -->
+          Controls
+        </header>
+        <div class="tracks-container">
+          <table class="tracks-table">
+            <thead>
+              <tr>
+                <th>
+                  <div class="song-marker">
+                    <!-- Add content here to indicate song length and beats -->
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th>Track</th>
+                <th>Controls</th>
+                <th>Visualization</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Render tracks dynamically using Angular *ngFor or JavaScript -->
+              <tr *ngFor="let track of tracks">
+                <td>{{ track.name }}</td>
+                <td>
+                  <div class="track-controls">
+                    <button (click)="muteTrack(track)">Mute</button>
+                    <button (click)="soloTrack(track)">Solo</button>
+                  </div>
+                  <!-- Add more track-specific controls as needed -->
+                </td>
+                <td>
+                  <div class="track-visualization">
+                    <!-- Track visualization: waveform, MIDI piano roll, etc. -->
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="library">Library</div>
+        <div class="mixer">Mixer</div>
+      </main>
+      <footer>
+        <!-- Footer content: project save, export, settings, etc. -->
+      </footer>
+    </div>
+  </body>
+</html>
